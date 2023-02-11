@@ -103,6 +103,11 @@ input[type="submit"] {
 .fa-magnifying-glass {
   color: white;
 }
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .section-filtre {
   width: 90%;
   display: flex;
@@ -111,7 +116,6 @@ input[type="submit"] {
   align-items: center;
   margin-bottom: 35px;
 }
-
 .btn-filter {
   display: flex;
   align-items: center;
@@ -124,6 +128,7 @@ input[type="submit"] {
 }
 .btn-filter h2 {
   padding-left: 10px;
+  font-size: 1.0625em;
 }
 .btn-filter i {
   color: #0065fc;
@@ -140,9 +145,9 @@ input[type="submit"] {
 .information i {
   color: #0065fc;
   margin-right: 11px;
-  border: 1px solid #d9d9d9;
+  border: 1.5px solid #d9d9d9;
   border-radius: 50%;
-  padding: 6px 10px;
+  padding: 5px 10px;
 }
 
 #hebergements {
@@ -289,7 +294,7 @@ input[type="submit"] {
   /* flex-direction: column; */
   /* justify-content: space-between; */
   width: 22%;
-  height: 444.51px;
+  height: 445px;
   max-height: 500px;
   border-radius: 20px;
   box-shadow: 0px 0px 6.4px rgba(0, 0, 0, 0.053),
@@ -327,4 +332,186 @@ footer {
 }
 .item p {
   padding-bottom: 12px;
+}
+/* Responsive pour la tablette */
+
+@media screen and (max-width: 992px) {
+  .section-filtre {
+    width: 100%;
+  }
+  .btn-filter {
+    padding: 10px;
+  }
+  #hebergements {
+    flex-direction: column;
+  }
+  .left-part {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .right-part {
+    width: 100%;
+  }
+  .right-part h1 {
+    padding-bottom: 26px;
+  }
+  .most-popular {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .most-popular article {
+    width: 30%;
+  }
+  .description h2 {
+    font-size: 0.875em;
+  }
+  .description p {
+    font-size: 0.8125em;
+  }
+  .lieux article {
+    height: 267px;
+  }
+  .lieux article > img {
+    height: 80%;
+  }
+  .lieux article > h2 {
+    padding: 6px 17px;
+  }
+}
+
+/* Respnonsive pour le Mobile */
+
+@media screen and (max-width: 768px) and (min-width: 200px) {
+  header {
+    flex-direction: column;
+    margin-bottom: 23px;
+  }
+  header img {
+    margin: 20px 0 48px 0;
+  }
+  .liens {
+    width: 100%;
+    margin: 0;
+  }
+  .liens ul {
+    padding: auto;
+  }
+  .liens ul li {
+    width: 50%;
+    text-align: center;
+  }
+  .liens ul li a {
+    display: inline-block;
+    width: 100%;
+    padding: 0 0 23px 0;
+    margin-left: 0;
+    border-top: none;
+    border-bottom: #f2f2f2 3px solid;
+  }
+
+  .liens ul li a:hover {
+    border-top: none;
+    border-bottom: #0065fc 3px solid;
+  }
+  main {
+    margin: 0;
+  }
+  main > h1 {
+    padding: 20px 15px;
+  }
+  main > p {
+    padding: 0 15px 10px 15px;
+  }
+  form {
+    margin: 40px auto;
+    width: 95%;
+  }
+  .location {
+    width: 15%;
+  }
+  input[type="text"] {
+    width: 70%;
+  }
+  input[type="submit"] {
+    display: none;
+  }
+  .search-icon {
+    display: flex;
+    width: 15%;
+  }
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 15px;
+  }
+  .container > h2 {
+    padding-bottom: 15px;
+  }
+  .section-filtre {
+    flex-wrap: wrap;
+  }
+  .btn-filter {
+    width: 48%;
+    padding: 15px 17px;
+    margin-bottom: 15px;
+  }
+  .btn-filter h2 {
+    font-size: 0.6875em;
+    padding-left: 5px;
+  }
+  .information {
+    padding: 0 15px;
+    align-items: flex-start;
+  }
+  .information i {
+    margin-right: 5px;
+  }
+  .right-part {
+    order: 0;
+    border-radius: 0px;
+    padding: 20px 15px;
+  }
+  .fa-chart-line {
+    right: 15px;
+  }
+  .most-popular {
+    flex-direction: column;
+  }
+  .most-popular article {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .left-part {
+    order: 1;
+    background-color: white;
+    border-radius: 0px;
+    padding: 20px 15px;
+  }
+  .left-part > h2 {
+    display: none;
+  }
+  .all-articles {
+    flex-direction: column;
+  }
+  .all-articles article {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  #activites {
+    padding: 15px;
+  }
+  .lieux {
+    flex-direction: column;
+  }
+  .lieux article {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  footer {
+    margin: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 45px 30px;
+  }
 }
