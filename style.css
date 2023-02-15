@@ -5,6 +5,10 @@
   box-sizing: border-box;
   font-size: 16px;
 }
+body {
+  max-width: 1400px;
+  margin: auto;
+}
 h1 {
   font-size: 1.375em;
   font-weight: 700;
@@ -108,7 +112,7 @@ input[type="submit"] {
 }
 .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   margin-bottom: 35px;
 }
@@ -116,7 +120,7 @@ input[type="submit"] {
   width: 90%;
   display: flex;
   /* flex-wrap: wrap; */
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 }
 .btn-filter {
@@ -124,7 +128,7 @@ input[type="submit"] {
   align-items: center;
   border: 2px #d9d9d9 solid;
   border-radius: 25px;
-  margin-bottom: 10px;
+  margin-left: 23px;
   padding: 14px 20px;
   cursor: pointer;
   transition: 0.2s ease;
@@ -341,11 +345,15 @@ footer {
 /* Responsive pour la tablette */
 
 @media screen and (max-width: 992px) {
+  .container {
+    justify-content: space-between;
+  }
   .section-filtre {
     width: 100%;
     justify-content: space-around;
   }
   .btn-filter {
+    margin-left: 0;
     padding: 10px;
   }
   #hebergements {
@@ -390,7 +398,7 @@ footer {
 
 /* Respnonsive pour le Mobile */
 
-@media screen and (max-width: 768px) and (min-width: 200px) {
+@media screen and (max-width: 768px) {
   header {
     flex-direction: column;
     margin-bottom: 23px;
@@ -522,5 +530,8 @@ footer {
     flex-direction: column;
     justify-content: flex-start;
     padding: 45px 30px;
+  }
+  .item {
+    margin-bottom: 40px;
   }
 }
